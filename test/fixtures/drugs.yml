@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  md5_id: MyString
+  url: MyString
+  name: MyString
+  producer: MyString
+  product_name: MyString
+  ingredient: MyString
+  sympto: MyString
+  catalog_md5_id: MyString
+  pharmacology_catalog_md5_id: MyString
+  done: 
+  py_name: MyString
+  py_product_name: MyString
+
+two:
+  md5_id: MyString
+  url: MyString
+  name: MyString
+  producer: MyString
+  product_name: MyString
+  ingredient: MyString
+  sympto: MyString
+  catalog_md5_id: MyString
+  pharmacology_catalog_md5_id: MyString
+  done: 
+  py_name: MyString
+  py_product_name: MyString
