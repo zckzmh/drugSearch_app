@@ -2,13 +2,12 @@
 <h1>Drug Search</h1>
 <div class="row">
 	<div class="span6 offset3">
-		<%= form_tag("/" ,action:"search",method:"post") do  %>
+		<%= form_tag(search_path,method:"post") do  %>
 		<%= text_field_tag(:search) %>
 		<%= submit_tag "搜索" ,class: "btn btn-large btn-primary"%>
 		<% end %>
 		
 	</div>
 </div>
-<% if  @drugs!=nil%>
-<%= render 'layouts/show' %>
-<% end %>
+<%= render  @drugs  if  @drugs%>
+

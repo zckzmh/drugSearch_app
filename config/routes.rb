@@ -6,6 +6,6 @@ match '/query/:id', to: 'drugs#query', via: 'get'
 resources :drugs
 root 'drugs#index' do
 end
-match  '/',to:'drugs#index',via:'post'
+match  '/search',to:'drugs#search',via:'post'
 
 end

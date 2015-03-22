@@ -7,11 +7,17 @@ class DrugsController < ApplicationController
                                    redirect_to @drug
 	 end
 	 def search
-		
+	       key = params[:search]
+	       puts key
+	       @drugs = Drug.search(key)
+	       render 'index'
 	end
 	 def index
-	  	 @drugs= Drug.find_all_by_product_name(params[:search])
-	  	puts "#{@drugs}"
+	 	# @news=Drug.find_all_by_product_name(params[:search])
+	 	# puts"#{@news}"
+	  	 # @drugs= Drug.where(:producer=>params[:search])
+	  	# puts "#{@counters}"
+	  	 @drugs
 	 end
 
 	def query
@@ -19,11 +25,5 @@ class DrugsController < ApplicationController
 	end
 	
 
-	private
-	def   drug_params
-		params.require(:drug).permit(:product_name, :name)
-	end
-	def query
-  	         @drug= Drug.find(params[:id])
-	end
+	
 end
