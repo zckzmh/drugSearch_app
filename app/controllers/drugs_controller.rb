@@ -9,14 +9,18 @@ class DrugsController < ApplicationController
 	 def search
 	       key = params[:search]
 	       puts key
-	       @drugs = Drug.search(key)
+	       # @drugs=Drug.exist.sort
+	       @drugs = Drug.search(key).paginate(:page => params[:page])
 	       render 'index'
 	end
 	 def index
+	 	
+	 	  # @drugs=Drug.exist.sort.paginate(:page => params[:page])
 	 	# @news=Drug.find_all_by_product_name(params[:search])
 	 	# puts"#{@news}"
 	  	 # @drugs= Drug.where(:producer=>params[:search])
 	  	# puts "#{@counters}"
+	  	# @drugs =Drug.paginate (:page => params[:page],:per_page => 5)
 	  	 @drugs
 	 end
 

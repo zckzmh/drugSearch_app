@@ -1,13 +1,23 @@
 
+
+<!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/2.3.2.0/css/bootstrap.min.css"> -->
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <h1>Drug Search</h1>
 <div class="row">
-	<div class="span6 offset3">
-		<%= form_tag(search_path,method:"post") do  %>
+	<div class="span7 offset4">
+		<%= form_tag(search_drugs_path,method:"get") do  %>
 		<%= text_field_tag(:search) %>
-		<%= submit_tag "搜索" ,class: "btn btn-large btn-primary"%>
+		<%= submit_tag "搜索" ,class: "btn1 btn-large btn-primary" %>
 		<% end %>
 		
 	</div>
 </div>
-<%= render  @drugs  if  @drugs%>
+
+<%=render  @drugs  if @drugs %>
+<div  class="offset3">
+<%=will_paginate @drugs, renderer: BootstrapPagination::Rails if  @drugs%> 
+</div>
+
 
