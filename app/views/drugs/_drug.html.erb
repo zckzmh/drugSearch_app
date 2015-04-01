@@ -1,6 +1,9 @@
 
 <div class="introduce">
-<p><b>商品名称：</b><%= drug.product_name%></p>
+
+<%= link_to drugs_show_item_path(drug.md5_id)  do%>
+      <span class="pading"><strong><%= drug.product_name%></strong></span>
+       <% end %>
 <p><b>通用名称：</b><%= drug.name%></p>
 <p><b>生产企业：</b><%= drug.producer%></p>
 <p><b>成分：</b> <%=drug.ingredient%></p>

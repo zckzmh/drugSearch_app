@@ -66,6 +66,7 @@ margin: 0 0 18px 0;
 input[type="text"]{
 	font-size: 28px;
 	line-height: 30px;
+  margin-top: 10px;
 }
 .introduce{
 	position: relative;
@@ -89,8 +90,13 @@ input[type="text"]{
  
   border: 1px solid transparent;
   border-radius: 4px;
-margin-top: -10px;
+
 }
 
+
 /*  will_paginate-Bootstrap*/
+.pading{
+  margin-bottom: 20px;
+  font-size: 20px;
+}
 
